@@ -1,0 +1,179 @@
+doctype html
+html(lang="es")
+	head
+		title IguanaFix | FrontEnd Challenge
+		meta(charset='utf-8')
+		meta(http-equiv='X-UA-Compatible' content='IE=edge')
+		meta(name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
+		meta(name='description' content="IguanaFix Frontend Challenge")
+		link(type="image/png" rel="icon" href="https://static.iguanafix.com/static/v2/images/favicon.ico?v=146.3.P")
+		link(type="text/css" rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:400,800')
+		link(rel='stylesheet', href='css/bootstrap.min.css')
+		link(rel='stylesheet', href='css/font-awesome.min.css')
+		link(rel='stylesheet', href='css/style.css')
+	body
+		div.user-toggle
+			div#user-login
+				span Usuario
+				input.user
+				span Contrasenia
+				input.passwd
+				div.login Login
+		nav
+			div.nav-info
+				img.nav-logo(src='https://static.iguanafix.com/static/v2/images/logo.svg?v=146.3.P' alt='iguanafix')
+				i.fa.fa-phone.nav-pad-left
+				span.pad-left.phone 0810-220-6173
+			ul.nav-menu
+				li 
+					a(href='#') Casa
+				li
+					a(href='#') Auto
+				li
+					a(href='#') Empresas
+				li.nav-user
+					a(href='#') Ingresar
+					i.fa.fa-user-circle-o.pad-left
+		main.container-fluid
+			p.service Contratar un servicio > Instalaci&oacute;n de aire acondicionado
+			div.row.flex
+				div.col-sm-2.hidden-xs
+					div.product-images.hidden-xs
+				div.col-sm-5.hidden-xs
+					div.product-main-img
+				div.product.col-sm-5
+					h1.product-name Instalaci&oacute;n de aire acondicionado split.
+					span.product-price
+					form#product-form
+						span.frigorias Frigor&iacute;as<br>
+						select(id='dropdown-frigorias')
+					div.quantity
+						div.quantity-button
+							button(id='decrement') -
+							input(id='quantity-value')
+							button(id='increment') +
+						span.units unidades.
+					div.visit
+						button(id='visit') Programar visita
+					div.product-details
+						span.whats-in Qu&eacute; incluye
+						ul
+							li 
+								i.fa.fa-check
+									span Desinstalaci&oacute;n del equipo anterior.
+							li
+								i.fa.fa-check
+									span Colocaci&oacute;n de nuevo equipo: unidad interior y exterior.
+							li
+								i.fa.fa-check
+									span Colocaci&oacute;n de drenaje.
+			div.row
+				div.col-sm-12.whats-in-it.text-center
+					span Detalles del servicio
+					span Qu&eacute; no incluye
+				div.service-info.col-sm-8.col-sm-offset-2
+					p El servicio incluye la desinstalación del aire acondicionado split anterior en caso de que lo hubiera. Colocación del nuevo equipo: unidad interior (hasta 2,5 mts de altura, incluído el taparroyos) y exterior (en lugares accesibles, hasta 2,5 mts de altura), Colocación de drenaje. Presurización, vacío y control de carga. Ménsulas estándar. Cañería de interconexión hasta 3 mts (3 mts de caño de cobre 1/2 o 1/4, 3 mts de cable tipo taller - 5 1/2, 3 mts de manguera de desagüe para drenaje, cinta PVC, Kit de tornillos y/o caños equivalentes según el equipo). Prueba del equipo. Limpieza del lugar.<br><br>Si no lo hubiera incluye perforación en pared pero no se incluyen trabajos de albañilería ni pintura para su cobertura.<br><br>Para el caso de los servicios que se realicen utilizando cajas de pre-instalaciones ya existentes en el domicilio o en cañerías embutidas, no se podrá garantizar el estado de tales materiales dado que no son provistos por el profesional.
+				div#related-products.col-sm-8.col-sm-offset-2
+		footer
+			div.footer-info
+				img.footer-logo(src='https://static.iguanafix.com/static/v2/images/logo.svg?v=146.3.P' alt='iguanafix')
+				div.footer-social
+					a(href="#")
+						i.fa.fa-2x.fa-fw.fa-instagram
+					a(href="#")
+						i.fa.fa-2x.fa-fw.fa-facebook
+					a(href="#")
+						i.fa.fa-2x.fa-fw.fa-youtube
+					a(href="#")
+						i.fa.fa-2x.fa-fw.fa-envelope
+			div.container-fluid
+				div.footer-home.row
+					div.col-sm-12
+						span.white Casa
+						hr.short-line
+						hr.long-line
+					div.col-sm-3
+						ul
+							li 
+								a(href="#") Lorem ipsum
+							li 
+								a(href="#") Lorem ipsum
+							li 
+								a(href="#") Lorem ipsum
+					div.col-sm-3
+						ul
+							li 
+								a(href="#") Lorem ipsum
+							li 
+								a(href="#") Lorem ipsum
+							li 
+								a(href="#") Lorem ipsum
+					div.col-sm-3
+						ul
+							li 
+								a(href="#") Lorem ipsum
+							li 
+								a(href="#") Lorem ipsum
+							li 
+								a(href="#") Lorem ipsum
+					div.col-sm-3
+						ul
+							li 
+								a(href="#") Lorem ipsum
+							li 
+								a(href="#") Lorem ipsum
+							li 
+								a(href="#") Lorem ipsum
+				div.footer-cars.row
+					div.col-sm-12
+						span.white Autos
+						hr.short-line
+						hr.long-line
+					div.col-sm-3
+						ul
+							li 
+								a(href="#") Lorem ipsum
+							li 
+								a(href="#") Lorem ipsum
+							li 
+								a(href="#") Lorem ipsum
+					div.col-sm-3
+						ul
+							li 
+								a(href="#") Lorem ipsum
+							li 
+								a(href="#") Lorem ipsum
+							li 
+								a(href="#") Lorem ipsum
+					div.col-sm-3
+						ul
+							li 
+								a(href="#") Lorem ipsum
+							li 
+								a(href="#") Lorem ipsum
+							li 
+								a(href="#") Lorem ipsum
+					div.col-sm-3
+						ul
+							li 
+								a(href="#") Lorem ipsum
+							li 
+								a(href="#") Lorem ipsum
+							li 
+								a(href="#") Lorem ipsum
+			div.footer-copyright
+				span.copyright © Copyright 2018. All rights reserved | #[a.iguanafix(href="#") IguanaFix]
+				div.stores
+					img.google(src="https://static.iguanafix.com/static/v2/images/home/badge-google-play_es.svg?v=146.3.P" alt="Logo de Google Play Store")
+					img.appstore(src="https://static.iguanafix.com/static/v2/images/home/badge-app-store_es.svg?v=146.3.P" alt="Logo de App Store")
+					img.afip-logo(src="https://static.iguanafix.com/static/images/DATAWEB.jpg?v=146.3.P" alt="Logo de AFIP")
+			div.footer-copyright-mobile.text-center.row
+				div.col-sm-12
+					span.copyright © Copyright 2018. All rights reserved | #[a.iguanafix(href="#") IguanaFix]
+				div.col-sm-12
+					div.stores
+						img.google(src="https://static.iguanafix.com/static/v2/images/home/badge-google-play_es.svg?v=146.3.P" alt="Logo de Google Play Store")
+						img.appstore(src="https://static.iguanafix.com/static/v2/images/home/badge-app-store_es.svg?v=146.3.P" alt="Logo de App Store")
+						img.afip-logo(src="https://static.iguanafix.com/static/images/DATAWEB.jpg?v=146.3.P" alt="Logo de AFIP")
+		script(src='js/jquery.min.js')
+		script(src='js/main.js')
