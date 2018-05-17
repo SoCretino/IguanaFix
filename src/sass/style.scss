@@ -412,12 +412,11 @@ footer {
 }
 
 .iguanafix {
-		transition: all 0.15s ease-in;
-		color: $white;
-		&:hover, :active {
-			color: $pink
-		}
-
+	transition: all 0.15s ease-in;
+	color: $white;
+	&:hover, :active {
+		color: $pink
+	}
 }
 
 .footer-copyright-mobile {

@@ -14,7 +14,6 @@ gulp.task('templates', function buildHTML() {
 		.pipe(gulp.dest('./dist/'))
 });
 
-//Watch task
 gulp.task('default',function() {
 	gulp.watch('src/sass/**/*.scss',['sass']);
 	gulp.watch('src/templates/**/*.pug',['templates']);

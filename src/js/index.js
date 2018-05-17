@@ -33,11 +33,11 @@ var products = {
 		product.quantity = data[0].minQuantity;
 		product.minQuantity = data[0].minQuantity;
 		product.pricePerUnit = centsToArs(data[0].unitPriceInCents);
-		product.fullPrice = "$" + centsToArs(data[0].unitPriceInCents * product.minQuantity);
+		product.fullPrice = centsToArs(data[0].unitPriceInCents * product.minQuantity);
 
 		//Get default product photos, along with the data from the API, and append them
 		products.getProductPhotos(product.id);
-		$(".product-price").html(product.fullPrice);
+		$(".product-price").html("$" + product.fullPrice.toLocaleString("es-ES"));	//toLocaleString adds a dot to the number
 		$("#quantity-value").val(product.minQuantity);
 
 		for (var i = 0; i < data.length; i++)
@@ -54,10 +54,10 @@ var products = {
 			product.quantity = data[id].minQuantity;
 			product.minQuantity = data[id].minQuantity;
 			product.pricePerUnit = centsToArs(data[id].unitPriceInCents);
-			product.fullPrice = "$" + centsToArs(data[id].unitPriceInCents * product.minQuantity);
+			product.fullPrice = centsToArs(data[id].unitPriceInCents * product.minQuantity);
 
 			products.getProductPhotos(product.id);
-			$(".product-price").html(product.fullPrice);
+			$(".product-price").html("$" + product.fullPrice.toLocaleString("es-ES"));
 			$("#quantity-value").val(product.minQuantity);
 		})
 	},
@@ -77,11 +77,14 @@ var products = {
 			$(".product-main-img").css("background-image", "url(" + data[id].url + ")");
 		})
 
-		//Sets background-image if on mobile. Note: You will need to refresh the page to get a proper view of it while resizing the window, else it will look all jammy.
-		var width = window.innerWidth;
-		if (width < 768) {
-			$(".product").css("background-image", "url(" + data[0].url + ")");
-		}
+		//Sets background-image if on mobile or removes it.
+		$(window).resize(function() {
+			var width = window.innerWidth;
+			if (width < 768)
+				$(".product").css("background-image", "url(" + data[0].url + ")");
+			else
+				$(".product").css("background-image", "none");
+		});
 	},
 	mapRelated: function(data) {
 		var related = "";
@@ -93,8 +96,8 @@ var products = {
 	},
 	incrementProductQuantity: function(quantity) {
 		product.quantity = quantity + 1;
-		product.fullPrice = "$" + product.pricePerUnit * product.quantity;
-		$('.product-price').html(product.fullPrice);
+		product.fullPrice = product.pricePerUnit * product.quantity;
+		$('.product-price').html("$" + product.fullPrice.toLocaleString("es-ES"));
 		$('#quantity-value').val(product.quantity);
 	},
 	decrementProductQuantity: function(quantity, minQuantity) {
@@ -103,8 +106,8 @@ var products = {
 			product.quantity = minQuantity;
 		else
 			product.quantity = decrement;
-		product.fullPrice = "$" + product.pricePerUnit * product.quantity;
-		$('.product-price').html(product.fullPrice);
+		product.fullPrice = product.pricePerUnit * product.quantity;
+		$('.product-price').html("$" + product.fullPrice.toLocaleString("es-ES"));
 		$('#quantity-value').val(product.quantity);
 	},
 	//Checks the input of #quantity-value on its own.
@@ -113,8 +116,8 @@ var products = {
 			product.quantity = minQuantity;
 		else
 			product.quantity = quantity;
-		product.fullPrice = "$" + product.pricePerUnit * product.quantity;
-		$('.product-price').html(product.fullPrice);
+		product.fullPrice = product.pricePerUnit * product.quantity;
+		$('.product-price').html("$" + product.fullPrice.toLocaleString("es-ES"));
 		$('#quantity-value').val(product.quantity);
 	}
 }
